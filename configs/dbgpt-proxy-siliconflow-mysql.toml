@@ -28,17 +28,18 @@ persist_path = "pilot/data"
 # Model Configurations
 [models]
 [[models.llms]]
-name = "Qwen/Qwen2.5-Coder-32B-Instruct"
-provider = "proxy/siliconflow"
-api_key = "${env:SILICONFLOW_API_KEY}"
+name = "deepseek-reasoner"
+provider = "proxy/deepseek"
+api_key = "sk-02328dd5037f463484ed0c92abf8a542"
 
 [[models.embeddings]]
 name = "BAAI/bge-m3"
-provider = "proxy/siliconflow"
+provider = "proxy/openai"
 api_key = "${env:SILICONFLOW_API_KEY}"
+api_url = "https://api.siliconflow.cn/v1/embeddings"
 
 [[models.rerankers]]
 type = "reranker"
 name = "BAAI/bge-reranker-v2-m3"
 provider = "proxy/siliconflow"
-api_key = "${env:SILICONFLOW_API_KEY}"
+api_key = "sk-tmzlwmpprimjssdvcjkrxxhlxhvdvivupdquifrxbfegqsor"

@@ -29,9 +29,9 @@ services:
       - MYSQL_USER=root
     volumes:
       - ./configs:/app/configs
-      - /data:/data
+      # - /data:/data
       # May be you can mount your models to container
-      - /data/models:/app/models
+      # - /data/models:/app/models
       - dbgpt-data:/app/pilot/data
       - dbgpt-message:/app/pilot/message
     depends_on:
